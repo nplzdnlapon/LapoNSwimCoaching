@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LapoN Swimming Coaching | Les Renang Privat & Semi Privat Balikpapan</title>
+  <meta name="description" content="Les renang privat & semi privat di Balikpapan bersama pelatih berlisensi Madya. Usia 5 tahun ke atas, 1–4 orang. Program reguler grup/klub maks. 10 orang segera hadir." />
+  <meta name="theme-color" content="#061a33" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png" />
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon-180.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Open Graph (tampilan saat link dibagikan di WA / IG) -->
+  <meta property="og:title" content="LapoN Swimming Coaching | Les Renang Privat & Semi Privat Balikpapan" />
+  <meta property="og:description" content="Belajar renang dari nol sampai mahir. Privat & semi privat fleksibel, pelatih berlisensi Madya. Program reguler grup segera hadir." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- Garis progres scroll -->
+  <div class="progress" id="progress"></div>
+
+  <!-- ===== KUMPULAN IKON SVG (dipakai dengan <use href="#i-...">) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+      <symbol id="i-wind" viewBox="0 0 24 24"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+      <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.29 1.29L3 12l5.8 1.9a2 2 0 0 1 1.29 1.29L12 21l1.9-5.8a2 2 0 0 1 1.29-1.29L21 12l-5.8-1.9a2 2 0 0 1-1.29-1.29Z"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#beranda" class="logo">
+          <img src="assets/logo-navbar.png" alt="Logo Privat Renang" class="logo-img" width="1203" height="811" decoding="async" />
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#tentang" class="nav-link">Tentang</a>
+          <a href="#program" class="nav-link">Program</a>
+          <a href="#paket" class="nav-link">Paket</a>
+          <a href="#jadwal" class="nav-link">Jadwal</a>
+          <a href="#lokasi" class="nav-link">Lokasi</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#daftar" class="nav-link mobile-only">Daftar</a>
+        </nav>
+        <a href="#daftar" class="btn btn-primary btn-sm nav-cta">Booking <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="beranda">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <div class="grid-lines"></div>
+      <div class="bubbles">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-tags hero-anim" style="--d:0">
+          <span class="badge-license"><svg class="icon"><use href="#i-award"/></svg> Pelatih Berlisensi Madya</span>
+          <span class="pill-live"><span class="dot"></span> Weekend Privat · Reguler Segera</span>
+        </div>
+
+        <h1 class="hero-anim" style="--d:1">Private Swim<br /><span class="grad-text">Lessons.</span></h1>
+
+        <p class="hero-typed hero-anim" style="--d:2">
+          Belajar renang dari nol sampai
+          <span class="typed" id="typed" data-words='["mahir.", "percaya diri.", "menguasai gaya renang.", "berani nyebur."]'>mahir.</span><span class="caret" aria-hidden="true"></span>
+        </p>
+
+        <p class="hero-desc hero-anim" style="--d:3">
+          Les renang privat & semi privat untuk usia 5 tahun sampai dewasa. Program reguler grup segera hadir,
+          dibimbing pelatih berlisensi di kolam terdekat dari rumahmu.
+        </p>
+
+        <div class="hero-cta hero-anim" style="--d:4">
+          <a href="#daftar" class="btn btn-primary btn-lg">Daftar Sekarang <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a href="#paket" class="btn btn-ghost btn-lg">Lihat Paket</a>
+        </div>
+
+        <div class="stats hero-anim" style="--d:5">
+          <div class="stat"><strong class="count" data-count="5" data-suffix="+">5+</strong><span>Usia minimal (tahun)</span></div>
+          <div class="stat"><strong class="count" data-prefix="1–" data-count="4">1–4</strong><span>Orang per sesi</span></div>
+          <div class="stat"><strong class="count" data-prefix="60–" data-from="60" data-count="90">60–90</strong><span>Menit per sesi</span></div>
+          <div class="stat"><strong class="count" data-count="6">6</strong><span>Kecamatan terjangkau</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual hero-anim" style="--d:2">
+        <div class="liquid-wrap">
+          <div class="liquid">
+            <span class="liquid-wave w1"></span>
+            <span class="liquid-wave w2"></span>
+            <div class="liquid-text">
+              <small>DISC*</small>
+              <span>UP TO</span>
+              <strong>10%</strong>
+              <span>OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-card fc-1">
+          <span class="fc-icon"><svg class="icon"><use href="#i-award"/></svg></span>
+          <div><b>Berlisensi</b><small>Pelatih tingkat Madya</small></div>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+          <div><b>Sabtu & Minggu</b><small>+ libur nasional</small></div>
+        </div>
+        <div class="float-card fc-3">
+          <span class="fc-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+          <div><b>Privat & Semi Privat</b><small>1–4 orang per sesi</small></div>
+        </div>
+
+        <p class="tiny">*Syarat & ketentuan berlaku, tanyakan via WhatsApp.</p>
+      </div>
+    </div>
+
+    <!-- Gelombang bergerak: 4 lapis dengan kecepatan berbeda -->
+    <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use href="#gentle-wave" x="48" y="0" />
+        <use href="#gentle-wave" x="48" y="3" />
+        <use href="#gentle-wave" x="48" y="5" />
+        <use href="#gentle-wave" x="48" y="7" />
+      </g>
+    </svg>
+  </section>
+
+  <!-- ===== TEKS BERJALAN ===== -->
+  <div class="marquee-zone" aria-hidden="true">
+    <div class="marquee m-back">
+      <div class="marquee-track">
+        <span class="mq-item">Belajar dari nol <svg class="icon"><use href="#i-waves"/></svg></span>
+        <span class="mq-item">Sampai mahir <svg class="icon"><use href="#i-waves"/></svg></span>
+        <span class="mq-item">Privat & fleksibel <svg class="icon"><use href="#i-waves"/></svg></span>
+        <span class="mq-item">Kolam terdekat <svg class="icon"><use href="#i-waves"/></svg></span>
+        <span class="mq-item">Disc up to 10% <svg class="icon"><use href="#i-waves"/></svg></span>
+      </div>
+    </div>
+    <div class="marquee m-front">
+      <div class="marquee-track">
+        <span class="mq-item">Pelatih Berlisensi Madya <svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+        <span class="mq-item">Weekend Privat <svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+        <span class="mq-item">Usia 5 Tahun – Dewasa <svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+        <span class="mq-item">Privat & Semi Privat <svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+        <span class="mq-item">Reguler Segera Hadir <svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+        <span class="mq-item">Area Balikpapan <svg class="icon icon-fill"><use href="#i-star"/></svg></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== KEUNGGULAN ===== -->
+  <section class="section" id="tentang">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Kenapa Privat & Semi Privat?</span>
+        <h2>Belajar lebih fokus, <span class="grad-text">hasil lebih cepat.</span></h2>
+        <p>Setiap peserta mendapat perhatian penuh dari pelatih, dengan materi yang disesuaikan kemampuan masing-masing.</p>
+      </div>
+
+      <div class="bento stagger">
+        <article class="bento-card big spot reveal">
+          <svg class="icon big-deco" aria-hidden="true"><use href="#i-waves"/></svg>
+          <div class="b-icon"><svg class="icon"><use href="#i-award"/></svg></div>
+          <span class="tag">Bersertifikat</span>
+          <h3>Pelatih Berlisensi Madya</h3>
+          <p>Dibimbing langsung oleh pelatih renang berlisensi tingkat Madya. Teknik yang benar sejak awal, latihan terarah sesuai kemampuan.</p>
+        </article>
+        <article class="bento-card spot reveal">
+          <div class="b-icon"><svg class="icon"><use href="#i-smile"/></svg></div>
+          <h3>Anak & Dewasa</h3>
+          <p>Mulai usia 5 tahun sampai dewasa. Dari yang belum bisa sama sekali sampai yang ingin memperbaiki teknik.</p>
+        </article>
+        <article class="bento-card spot reveal">
+          <div class="b-icon"><svg class="icon"><use href="#i-calendar"/></svg></div>
+          <h3>Jadwal Fleksibel</h3>
+          <p>Weekend & libur nasional. Jam latihan disepakati bersama.</p>
+        </article>
+        <article class="bento-card spot reveal">
+          <div class="b-icon"><svg class="icon"><use href="#i-users"/></svg></div>
+          <h3>Privat & Semi Privat</h3>
+          <p>Privat 1 orang atau semi privat 2–4 orang. Bisa sendiri, bareng keluarga, atau teman.</p>
+        </article>
+        <article class="bento-card spot reveal">
+          <div class="b-icon"><svg class="icon"><use href="#i-pin"/></svg></div>
+          <h3>Kolam Dekat Rumah</h3>
+          <p>Kolam perumahan atau kolam umum terdekat di area Balikpapan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAM BELAJAR ===== -->
+  <section class="section panel-dark" id="program">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Program Belajar</span>
+        <h2>Dari nol sampai <span class="grad-text">mahir</span>, step by step.</h2>
+        <p>Materi disusun bertahap mengikuti kemampuan setiap peserta.</p>
+      </div>
+
+      <div class="steps stagger">
+        <div class="step reveal">
+          <span class="step-num">01</span>
+          <div class="step-icon"><svg class="icon"><use href="#i-droplet"/></svg></div>
+          <h3>Pengenalan Air</h3>
+          <p>Membangun rasa nyaman dan percaya diri di dalam air.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">02</span>
+          <div class="step-icon"><svg class="icon"><use href="#i-wind"/></svg></div>
+          <h3>Pernapasan</h3>
+          <p>Teknik mengambil dan membuang napas yang benar saat berenang.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">03</span>
+          <div class="step-icon"><svg class="icon"><use href="#i-activity"/></svg></div>
+          <h3>Teknik Dasar</h3>
+          <p>Mengapung, meluncur, serta koordinasi gerakan kaki dan tangan.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">04</span>
+          <div class="step-icon"><svg class="icon"><use href="#i-trophy"/></svg></div>
+          <h3>Penguasaan Gaya</h3>
+          <p>Menguasai gaya renang lebih cepat dan rutin berolahraga.</p>
+        </div>
+      </div>
+
+      <div class="program-formats reveal">
+        <div class="format-head">
+          <div>
+            <span class="eyebrow">Format Latihan</span>
+            <h3>Pilih cara latihan yang paling pas.</h3>
+          </div>
+          <p>Privat & semi privat berjalan tiap weekend. Program reguler untuk grup/klub segera hadir di hari weekday.</p>
+        </div>
+
+        <div class="program-grid stagger">
+          <article class="program-card reveal">
+            <div class="program-card-head">
+              <span class="program-icon"><svg class="icon"><use href="#i-smile"/></svg></span>
+              <span class="program-badge">Tersedia</span>
+            </div>
+            <h3>Privat</h3>
+            <p>Fokus penuh untuk satu peserta. Materi dan tempo latihan disesuaikan dengan target pribadi.</p>
+            <div class="program-meta">
+              <span><svg class="icon"><use href="#i-users"/></svg> 1 orang</span>
+              <span><svg class="icon"><use href="#i-calendar"/></svg> Weekend & libur</span>
+            </div>
+            <a href="#paket" class="btn btn-ghost btn-sm">Lihat paket</a>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="program-card-head">
+              <span class="program-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+              <span class="program-badge">Tersedia</span>
+            </div>
+            <h3>Semi Privat</h3>
+            <p>Latihan bareng teman atau keluarga dalam kelompok kecil, tetap dengan pengawasan pelatih.</p>
+            <div class="program-meta">
+              <span><svg class="icon"><use href="#i-users"/></svg> 2–4 orang</span>
+              <span><svg class="icon"><use href="#i-calendar"/></svg> Weekend & libur</span>
+            </div>
+            <a href="#paket" class="btn btn-ghost btn-sm">Lihat paket</a>
+          </article>
+
+          <article class="program-card is-soon reveal">
+            <div class="program-card-head">
+              <span class="program-icon"><svg class="icon"><use href="#i-trophy"/></svg></span>
+              <span class="program-badge soon">Coming Soon</span>
+            </div>
+            <h3>Reguler</h3>
+            <p>Untuk grup atau klub renang. Latihan rutin tiap minggu dengan kelompok maksimal 10 orang.</p>
+            <div class="program-meta">
+              <span><svg class="icon"><use href="#i-users"/></svg> Maks. 10 orang</span>
+              <span><svg class="icon"><use href="#i-clock"/></svg> 1× / minggu</span>
+              <span><svg class="icon"><use href="#i-calendar"/></svg> Hari weekday</span>
+            </div>
+            <a href="https://wa.me/6285770012133?text=Halo%20Coach%2C%20saya%20mau%20tanya%20info%20program%20reguler%20grup%2Fklub%20yang%20segera%20hadir." class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Tanya info <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAKET ===== -->
+  <section class="section" id="paket">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pilihan Paket</span>
+        <h2>Pilih paket, <span class="grad-text">langsung nyebur.</span></h2>
+        <p>Makin banyak sesi, makin hemat. Durasi 60–90 menit per sesi tergantung jumlah peserta.</p>
+      </div>
+
+      <div class="pricing stagger">
+        <article class="price-card tilt reveal">
+          <div class="pc-head">
+            <span class="pc-label">Paket Basic</span>
+            <span class="pc-sessions">4 Sesi</span>
+          </div>
+          <p class="price"><small>Rp</small>550.000</p>
+          <p class="per">± Rp 137.500 / sesi</p>
+          <span class="save">Hemat Rp 50.000</span>
+          <ul class="checks">
+            <li>Pengenalan air</li>
+            <li>Teknik dasar renang</li>
+            <li>Latihan pernapasan</li>
+          </ul>
+          <a href="#daftar" class="btn btn-outline pick-paket" data-target="pk-basic">Pilih Basic</a>
+        </article>
+
+        <article class="price-card featured tilt reveal">
+          <span class="ribbon"><svg class="icon icon-fill"><use href="#i-star"/></svg> Best Value</span>
+          <div class="pc-head">
+            <span class="pc-label">Paket Intensive</span>
+            <span class="pc-sessions">8 Sesi</span>
+          </div>
+          <p class="price"><small>Rp</small>1.000.000</p>
+          <p class="per">hanya Rp 125.000 / sesi</p>
+          <span class="save">Hemat Rp 200.000</span>
+          <ul class="checks">
+            <li>Penguasaan gaya renang lebih cepat</li>
+            <li>Rutin olahraga tiap minggu</li>
+            <li>Harga per sesi paling hemat</li>
+          </ul>
+          <a href="#daftar" class="btn btn-primary pick-paket" data-target="pk-intensive">Pilih Intensive <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </article>
+
+        <article class="price-card tilt reveal">
+          <div class="pc-head">
+            <span class="pc-label">Per Sesi</span>
+            <span class="pc-sessions">Trial</span>
+          </div>
+          <p class="price"><small>Rp</small>150.000</p>
+          <p class="per">per sesi / visit</p>
+          <span class="save save-neutral">Coba dulu</span>
+          <ul class="checks">
+            <li>Cocok untuk sesi percobaan</li>
+            <li>Kenalan dengan metode pelatih</li>
+            <li>Bisa lanjut ke paket</li>
+          </ul>
+          <a href="#daftar" class="btn btn-outline pick-paket" data-target="pk-trial">Pilih Trial</a>
+        </article>
+      </div>
+
+      <div class="price-info reveal">
+        <span><svg class="icon"><use href="#i-clock"/></svg> 60–90 menit / sesi</span>
+        <span><svg class="icon"><use href="#i-ticket"/></svg> Tiket masuk kolam ditanggung peserta</span>
+        <span><svg class="icon"><use href="#i-sparkles"/></svg> Disc up to 10%*</span>
+      </div>
+      <p class="price-footnote reveal">Penghematan dihitung dibanding harga per sesi (Rp 150.000).</p>
+    </div>
+  </section>
+
+  <!-- ===== JADWAL ===== -->
+  <section class="section bg-alt" id="jadwal">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Jadwal Latihan</span>
+        <h2>Weekend privat, <span class="grad-text">reguler segera hadir.</span></h2>
+        <p>Privat & semi privat berjalan di weekend dan tanggal merah. Program reguler grup/klub direncanakan rutin tiap minggu di salah satu hari weekday.</p>
+      </div>
+
+      <div class="week reveal">
+        <div class="wday off"><span class="wd-name">Sen</span><span class="wd-status">Libur</span></div>
+        <div class="wday off"><span class="wd-name">Sel</span><span class="wd-status">Libur</span></div>
+        <div class="wday off"><span class="wd-name">Rab</span><span class="wd-status">Libur</span></div>
+        <div class="wday off"><span class="wd-name">Kam</span><span class="wd-status">Libur</span></div>
+        <div class="wday off"><span class="wd-name">Jum</span><span class="wd-status">Libur</span></div>
+        <div class="wday on">
+          <span class="wd-name">Sabtu</span>
+          <svg class="icon"><use href="#i-clock"/></svg>
+          <span class="wd-status">Siang – Malam</span>
+        </div>
+        <div class="wday on">
+          <span class="wd-name">Minggu</span>
+          <svg class="icon"><use href="#i-clock"/></svg>
+          <span class="wd-status">Sesuai kesepakatan</span>
+        </div>
+      </div>
+
+      <div class="regular-teaser reveal">
+        <span class="rt-icon"><svg class="icon"><use href="#i-trophy"/></svg></span>
+        <div class="rt-copy">
+          <span class="program-badge soon">Coming Soon</span>
+          <h3>Program Reguler — grup & klub renang</h3>
+          <p>Maksimal 10 orang, latihan rutin 1× per minggu di salah satu hari weekday. Cocok untuk klub, komunitas, atau grup teman.</p>
+        </div>
+        <a href="https://wa.me/6285770012133?text=Halo%20Coach%2C%20saya%20mau%20tanya%20info%20program%20reguler%20grup%2Fklub%20yang%20segera%20hadir." class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Tanya info <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="jadwal-grid">
+        <div class="holiday reveal">
+          <div class="h-icon"><svg class="icon"><use href="#i-calendar"/></svg></div>
+          <div>
+            <h3>Libur nasional? Tetap bisa latihan.</h3>
+            <p>Tanggal merah juga tersedia, jam latihan sesuai kesepakatan.</p>
+          </div>
+        </div>
+        <div class="notes reveal">
+          <h3><svg class="icon"><use href="#i-clipboard"/></svg> Catatan Penting</h3>
+          <ul>
+            <li><b>Tiket masuk kolam</b> ditanggung masing-masing peserta.</li>
+            <li><b>Lokasi fleksibel:</b> kolam ditentukan sesuai lokasi terdekat peserta di area Balikpapan (kolam perumahan atau kolam umum).</li>
+            <li><b>Durasi latihan</b> 60–90 menit, tergantung jumlah peserta.</li>
+            <li><b>Privat</b> 1 orang, <b>semi privat</b> 2–4 orang per sesi.</li>
+            <li>Bawa perlengkapan renang sendiri (baju renang, kacamata, handuk).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOKASI ===== -->
+  <section class="section" id="lokasi">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Lokasi</span>
+        <h2>Kami yang datang ke <span class="grad-text">kolam terdekatmu.</span></h2>
+        <p>Melayani seluruh area Balikpapan. Pilih kecamatanmu untuk melihat kolam renang di sekitarnya.</p>
+      </div>
+
+      <div class="location reveal">
+        <div class="map-card">
+          <span class="map-pill"><span class="dot"></span> <span id="mapLabel">Semua area Balikpapan</span></span>
+          <iframe
+            id="mapFrame"
+            title="Peta kolam renang di Balikpapan"
+            src="https://maps.google.com/maps?q=kolam%20renang%20Balikpapan&z=12&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="area-panel">
+          <div>
+            <h3>Pilih kecamatan</h3>
+            <p class="muted">Klik untuk melihat kolam renang di area tersebut.</p>
+          </div>
+          <div class="chips" id="areaChips">
+            <button type="button" class="chip active" data-area="Balikpapan">Semua</button>
+            <button type="button" class="chip" data-area="Balikpapan Kota">Balikpapan Kota</button>
+            <button type="button" class="chip" data-area="Balikpapan Selatan">Balikpapan Selatan</button>
+            <button type="button" class="chip" data-area="Balikpapan Tengah">Balikpapan Tengah</button>
+            <button type="button" class="chip" data-area="Balikpapan Utara">Balikpapan Utara</button>
+            <button type="button" class="chip" data-area="Balikpapan Timur">Balikpapan Timur</button>
+            <button type="button" class="chip" data-area="Balikpapan Barat">Balikpapan Barat</button>
+          </div>
+          <div class="pool-types">
+            <div class="pool">
+              <span class="pool-icon"><svg class="icon"><use href="#i-home"/></svg></span>
+              <div><b>Kolam Perumahan</b><p>Latihan di kolam kompleks perumahanmu.</p></div>
+            </div>
+            <div class="pool">
+              <span class="pool-icon"><svg class="icon"><use href="#i-waves"/></svg></span>
+              <div><b>Kolam Umum</b><p>Kolam renang umum terdekat di Balikpapan.</p></div>
+            </div>
+          </div>
+          <a id="mapLink" href="https://www.google.com/maps/search/kolam%20renang%20Balikpapan" target="_blank" rel="noopener" class="btn btn-outline">
+            Buka di Google Maps <svg class="icon"><use href="#i-external"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAFTAR ===== -->
+  <section class="section panel-dark" id="daftar">
+    <div class="container daftar-grid">
+      <div class="daftar-info reveal">
+        <span class="eyebrow">Daftar Sekarang</span>
+        <h2>Booking jadwal <span class="grad-text">lewat WhatsApp.</span></h2>
+        <p class="lead">Isi formulir, pesanmu tersusun otomatis dan langsung terkirim ke WhatsApp pelatih.</p>
+
+        <ol class="flow">
+          <li>
+            <span class="flow-icon"><svg class="icon"><use href="#i-edit"/></svg></span>
+            <div><b>Isi formulir</b><p>Data singkat peserta dan paket pilihan.</p></div>
+          </li>
+          <li>
+            <span class="flow-icon"><svg class="icon"><use href="#i-message"/></svg></span>
+            <div><b>Kirim ke WhatsApp</b><p>Pesan tersusun otomatis, tinggal tekan kirim.</p></div>
+          </li>
+          <li>
+            <span class="flow-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+            <div><b>Tentukan kolam & jadwal</b><p>Disepakati bersama pelatih.</p></div>
+          </li>
+          <li>
+            <span class="flow-icon"><svg class="icon"><use href="#i-flag"/></svg></span>
+            <div><b>Mulai latihan</b><p>Siapkan baju renang, kacamata, dan handuk.</p></div>
+          </li>
+        </ol>
+
+        <div class="contact-cards">
+          <a href="https://wa.me/6285770012133" target="_blank" rel="noopener" class="contact-card">
+            <span class="cc-icon cc-wa"><svg class="icon icon-fill"><use href="#i-wa"/></svg></span>
+            <div><small>WhatsApp</small><b>0857-7001-2133</b></div>
+          </a>
+          <a href="https://instagram.com/laponswimcoaching" target="_blank" rel="noopener" class="contact-card">
+            <span class="cc-icon cc-ig"><svg class="icon"><use href="#i-instagram"/></svg></span>
+            <div><small>Instagram</small><b>@laponswimcoaching</b></div>
+          </a>
+        </div>
+      </div>
+
+      <form class="form reveal" id="formDaftar" novalidate>
+        <h3 class="form-title">Formulir Pendaftaran</h3>
+        <p class="form-sub">Hanya butuh 1 menit.</p>
+
+        <div class="form-grid">
+          <fieldset class="field full">
+            <legend>Jumlah Peserta</legend>
+            <div class="segmented">
+              <label><input type="radio" name="jumlah" value="1" checked /><span>1 orang</span></label>
+              <label><input type="radio" name="jumlah" value="2" /><span>2 orang</span></label>
+              <label><input type="radio" name="jumlah" value="3" /><span>3 orang</span></label>
+              <label><input type="radio" name="jumlah" value="4" /><span>4 orang</span></label>
+            </div>
+            <p class="field-hint">Pilih 2–4 orang untuk semi privat.</p>
+          </fieldset>
+
+          <div class="participant-list full" id="pesertaList">
+            <div class="participant-row" data-index="1">
+              <label class="field">
+                <span>Nama Peserta 1</span>
+                <input type="text" name="peserta_nama_1" placeholder="Contoh: Budi Santoso" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span>Usia Peserta 1</span>
+                <input type="number" name="peserta_usia_1" min="5" max="99" placeholder="Contoh: 10" required />
+              </label>
+            </div>
+          </div>
+
+          <fieldset class="field full">
+            <legend>Pilihan Paket</legend>
+            <div class="radio-cards">
+              <label class="rc">
+                <input type="radio" name="paket" id="pk-basic" value="Paket Basic (4 Sesi) - Rp 550.000" />
+                <span class="rc-body"><b>Basic</b><small>4 sesi</small><em>Rp 550rb</em></span>
+              </label>
+              <label class="rc">
+                <input type="radio" name="paket" id="pk-intensive" value="Paket Intensive (8 Sesi) - Rp 1.000.000" checked />
+                <span class="rc-body"><b>Intensive</b><small>8 sesi</small><em>Rp 1jt</em></span>
+              </label>
+              <label class="rc">
+                <input type="radio" name="paket" id="pk-trial" value="Per Sesi / Visit (Trial) - Rp 150.000" />
+                <span class="rc-body"><b>Trial</b><small>1 sesi</small><em>Rp 150rb</em></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <p class="form-soon full">
+            <span class="form-soon-badge">Coming Soon</span>
+            <span><b>Program Reguler</b> untuk grup/klub (maks. 10 orang, hari weekday) segera hadir. <a href="https://wa.me/6285770012133?text=Halo%20Coach%2C%20saya%20mau%20tanya%20info%20program%20reguler%20grup%2Fklub%20yang%20segera%20hadir." target="_blank" rel="noopener">Tanya info via WhatsApp</a>.</span>
+          </p>
+
+          <label class="field">
+            <span>Kemampuan Saat Ini</span>
+            <select name="level">
+              <option value="Belum bisa berenang">Belum bisa berenang</option>
+              <option value="Bisa sedikit / mengapung">Bisa sedikit / mengapung</option>
+              <option value="Sudah bisa, ingin memperbaiki teknik">Sudah bisa, perbaiki teknik</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Area / Kecamatan</span>
+            <select name="area">
+              <option value="Balikpapan Kota">Balikpapan Kota</option>
+              <option value="Balikpapan Selatan">Balikpapan Selatan</option>
+              <option value="Balikpapan Tengah">Balikpapan Tengah</option>
+              <option value="Balikpapan Utara">Balikpapan Utara</option>
+              <option value="Balikpapan Timur">Balikpapan Timur</option>
+              <option value="Balikpapan Barat">Balikpapan Barat</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Hari yang Diinginkan</span>
+            <select name="hari">
+              <option value="Sabtu">Sabtu</option>
+              <option value="Minggu">Minggu</option>
+              <option value="Libur Nasional">Libur Nasional</option>
+              <option value="Fleksibel">Fleksibel</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Preferensi Kolam</span>
+            <select name="kolam">
+              <option value="Kolam perumahan">Kolam perumahan</option>
+              <option value="Kolam umum">Kolam umum</option>
+              <option value="Belum tahu, minta rekomendasi">Belum tahu, minta rekomendasi</option>
+            </select>
+          </label>
+          <label class="field full">
+            <span>Catatan (opsional)</span>
+            <textarea name="catatan" rows="3" placeholder="Contoh: nama perumahan, jam yang diinginkan, dll."></textarea>
+          </label>
+        </div>
+
+        <p class="form-error" id="formError" role="alert"></p>
+        <button type="submit" class="btn btn-wa btn-lg">
+          <svg class="icon icon-fill"><use href="#i-wa"/></svg>
+          Kirim ke WhatsApp
+        </button>
+        <p class="form-note">Kamu akan diarahkan ke WhatsApp. Data tidak disimpan di website ini.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Ada <span class="grad-text">pertanyaan?</span></h2>
+      </div>
+      <div class="faq stagger">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Usia berapa yang bisa ikut les?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Mulai dari anak-anak usia 5 tahun sampai dewasa. Tidak ada batas usia maksimal.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Saya sama sekali belum bisa berenang, boleh ikut?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Tentu! Program dimulai dari nol: pengenalan air, teknik dasar, dan pernapasan. Paket Basic sangat cocok untuk pemula.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Apakah harga sudah termasuk tiket masuk kolam?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Belum. Tiket masuk kolam ditanggung masing-masing peserta.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Di mana lokasi latihannya?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Lokasi fleksibel di area Balikpapan. Kolam ditentukan sesuai lokasi terdekat peserta, bisa kolam perumahan atau kolam umum.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Satu sesi bisa untuk berapa orang?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Privat untuk 1 orang, semi privat 2–4 orang per sesi. Durasi 60–90 menit tergantung jumlah peserta.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Apakah ada program reguler untuk grup atau klub?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Segera hadir. Program reguler ditujukan untuk grup atau klub renang dengan maksimal 10 orang, latihan rutin 1× per minggu di salah satu hari weekday. Hubungi coach via WhatsApp untuk informasi lebih lanjut.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Bagaimana cara dapat diskon 10%?<span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Diskon hingga 10% berlaku dengan syarat & ketentuan tertentu. Silakan tanyakan langsung via WhatsApp.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-wrap">
+    <div class="container">
+      <div class="cta reveal">
+        <span class="cta-wave cw1" aria-hidden="true"></span>
+        <span class="cta-wave cw2" aria-hidden="true"></span>
+        <h2>Weekend ini, <span>saatnya nyebur.</span></h2>
+        <p>Amankan jadwal latihanmu sekarang, langsung chat pelatih.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/6285770012133?text=Halo%20Coach%2C%20saya%20mau%20tanya%20les%20renang%20privat" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
+            <svg class="icon icon-fill"><use href="#i-wa"/></svg> Chat WhatsApp
+          </a>
+          <a href="#daftar" class="btn btn-ghost btn-lg">Isi Formulir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#beranda" class="logo">
+          <img src="assets/logo-navbar.png" alt="Logo Privat Renang" class="logo-img" width="1203" height="811" loading="lazy" decoding="async" />
+        </a>
+        <p class="footer-desc">LapoN Swimming Coaching, les renang privat & semi privat di Balikpapan. Program reguler grup segera hadir. Belajar bersama pelatih berlisensi Madya, jadwal fleksibel.</p>
+        <div class="socials">
+          <a href="https://wa.me/6285770012133" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon-fill"><use href="#i-wa"/></svg></a>
+          <a href="https://instagram.com/laponswimcoaching" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#paket">Paket</a></li>
+          <li><a href="#lokasi">Lokasi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6285770012133" target="_blank" rel="noopener">0857-7001-2133</a></li>
+          <li><a href="https://instagram.com/laponswimcoaching" target="_blank" rel="noopener">@laponswimcoaching</a></li>
+          <li>Balikpapan, Kalimantan Timur</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Jadwal</h4>
+        <ul>
+          <li>Sabtu: Siang – Malam</li>
+          <li>Minggu: sesuai kesepakatan</li>
+          <li>Libur nasional: sesuai kesepakatan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> LapoN Swimming Coaching · Balikpapan</div>
+    <div class="footer-big" aria-hidden="true">LapoN</div>
+  </footer>
+
+  <!-- Tombol melayang -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas"><svg class="icon"><use href="#i-up"/></svg></button>
+  <a href="https://wa.me/6285770012133?text=Halo%20Coach%2C%20saya%20mau%20tanya%20les%20renang%20privat" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <svg class="icon icon-fill"><use href="#i-wa"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
